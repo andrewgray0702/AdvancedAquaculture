@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./live-stock.component.scss']
 })
 export class LiveStockComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
