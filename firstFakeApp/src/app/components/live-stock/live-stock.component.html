@@ -1,23 +1,24 @@
 <div class="container">
-  <aside class="searchBar">
-    <input type="text">
-    <button>Search</button>
-    <mat-form-field>
-    <select>
-      <option>Fish</option>
-      <option>Coral</option>
-    </select>
-  </mat-form-field>
-  </aside>
-  <div class="productsForSale">
-    <div class="coral">Ultra Rasta Zoa</div>
-    <div class="fish">Picasso Percula Clownfish</div>
-    <div class="coral">Halloween Leptoseris</div>
-    <div class="coral">Rainbow Acan</div>
-    <div class="fish">Lined Seahorse</div>
-    <div class="coral">3G Mummy Eye Chalice</div>
-    <div class="coral">Blonde Haired Blue Eye Bitch Zoa</div>
-    <div class="coral">Pink Boobie Chalice</div>
-    <div class="fish">Fuzzy Nut</div>
+  <div class="row">
+    <div class="col-lg-3 col-sm-12 searchBar bgColorLightBlue">
+      <h2>Search</h2>
+      <input type="text" [(ngModel)]="refine">
+      <button>Search</button>
+      <select class="custom-select">
+        <option selected>Search By:</option>
+        <option>Fish</option>
+        <option>Coral</option>
+      </select>
+    </div>
+    <div class="col-lg-9 col-sm-12">
+      <div class="row">
+        <div *ngFor="let product of products | filter:refine" class="col-4 products bgColorLightBlue">
+          <div class="coral center"><img [src]="'assets/' + product.img">
+            <h4 class="center">{{product.name}}</h4>
+            <p>{{product.price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -8,7 +8,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { LiveStockComponent } from './components/live-stock/live-stock.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SearchbyPipe } from './pipes/searchby.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,10 +18,12 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     FooterComponent,
     HomePageComponent,
     LiveStockComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    FilterPipe,
+    SearchbyPipe
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, FormsModule,
     AppRoutingModule
   ],
   providers: [],
