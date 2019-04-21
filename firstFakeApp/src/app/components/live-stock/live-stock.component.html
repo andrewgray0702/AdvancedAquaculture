@@ -1,4 +1,4 @@
-<div class="behind">
+<div class="darkblue">
 <div class="container">
   <div class="row">
     <div class="col-lg-3 col-sm-12 searchBar bgColorLightBlue">
@@ -10,6 +10,7 @@
         <option value="fish">Fish</option>
         <option value="coral">Coral</option>
       </select>
+      <a href="/cart"><button type="button" class="btn btn-dark darkblue">View Cart</button></a>
     </div>
     <div class="col-lg-9 col-sm-12">
       <div class="row">
@@ -17,7 +18,8 @@
           <div class="coral center"><img [src]="'assets/' + product.img">
             <h4 class="center">{{product.name}}</h4>
             <p>{{product.price}}</p>
-          </div>
+            <button type="button" class="btn darkblue textWhite">Add to cart</button>
+          </div> 
         </div>
       </div>
     </div>

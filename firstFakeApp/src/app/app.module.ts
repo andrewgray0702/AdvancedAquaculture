@@ -10,7 +10,8 @@ import { LiveStockComponent } from './components/live-stock/live-stock.component
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
-import { SearchbyPipe } from './pipes/searchby.pipe'
+import { SearchbyPipe } from './pipes/searchby.pipe';
+import { CartComponent } from './components/cart/cart.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { SearchbyPipe } from './pipes/searchby.pipe'
     LiveStockComponent,
     AboutUsComponent,
     FilterPipe,
-    SearchbyPipe
+    SearchbyPipe,
+    CartComponent
   ],
   imports: [
     BrowserModule, FormsModule,
