@@ -7,11 +7,11 @@
           <div class="padding20">
             <h4 class="center">Cart Contents</h4>
             <hr>
-            <div *ngFor="let cartView of cartViews" class="col-12">
+            <div *ngFor="let cartView of (cartViews | async); let id = index" class="col-12">
               <ul>
                 <li>{{cartView.name}}</li>
                 <li>{{cartView.price}}</li>
-                <li><button (click)="deleteCartItem(cartView['ID'])">Delete</button></li>
+                <li><button (click)="deleteCartItem(id)">Delete</button></li>
               </ul>
             </div>
           </div>

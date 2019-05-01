@@ -4,21 +4,20 @@
     <app-header></app-header>
     <div class="container">
     <div class="row">
-      <div class="col-3 searchBar secondary">
-        <h2>Search</h2>
-        <input type="text" [(ngModel)]="refine">
-        <button>Search</button>
-        <select class="custom-select">
-          <option selected>Search By:</option>
+      <div class="col-lg-3 col-sm-12 searchBar secondary">
+        <h2>Search:</h2>
+        <input type="text" [(ngModel)]="refine" aria-label="Search">
+        <select class="custom-select" [(ngModel)]="search">
+          <option value="all">All</option>
           <option value="fish">Fish</option>
           <option value="coral">Coral</option>
         </select>
         <p>Cart Total: ${{totalPrice}}</p>
         <a [routerLink]="['/cart']"><button type="button" class="btn primary">View Cart</button></a>
       </div>
-      <div class="col-9">
+      <div class="col-lg-9 col-sm-12">
         <div class="row">
-        <div *ngFor="let product of products | filter:refine" class="col-4 products secondary">
+        <div *ngFor="let product of products | filter:refine | searchby:search" class="col-4 products secondary">
           <div class="coral center"><img [src]="'assets/' + product.img">
             <h4 class="center">{{product.name}}</h4>
             <p>{{product.price}}</p>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { LiveStockComponent } from '../live-stock/live-stock.component';
 import { CartService } from 'src/app/services/cart.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  cartViews: Object[] = [];
+  cartViews: Observable<Object[]>;
   cartPrice: number = 0;
   shipping: number = 45;
   subtotal: number = 0;
@@ -21,7 +22,7 @@ export class CartComponent implements OnInit {
     this.cartServ.deleteFromCart(id);
   }
   ngOnInit() {
-    this.cartViews = JSON.parse(localStorage.getItem('cart'));
+    this.cartViews = this.cartServ.items;
   }
 
 }

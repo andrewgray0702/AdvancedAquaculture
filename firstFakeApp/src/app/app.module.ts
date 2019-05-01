@@ -12,7 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SearchbyPipe } from './pipes/searchby.pipe';
 import { CartComponent } from './components/cart/cart.component'
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContactUsComponent } from './contact-us/contact-us.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     AboutUsComponent,
     FilterPipe,
     SearchbyPipe,
-    CartComponent
+    CartComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule, FormsModule,

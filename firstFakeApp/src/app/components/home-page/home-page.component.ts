@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomePageComponent implements OnInit {
 
   constructor() { }
-  images = ['assets/carousel1.jpg', 'assets/carousel2.jpg', 'assets/carousel3.jpg']
+  images = ['assets/carousel1.jpg', 'assets/carousel2.jpg', 'assets/carousel3.jpg', 'assets/carousel4.jpg', 'assets/carousel5.jpg']
   ngOnInit() {
   }
 
