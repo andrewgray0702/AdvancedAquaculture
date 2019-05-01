@@ -1,5 +1,7 @@
-<div class="darkblue">
+<div [ngStyle]="{background: 'url(assets/reefbackground.jpg)'}">
+    
 <div class="container">
+    <app-header></app-header>
   <div class="row">
     <div class="col-lg-3 col-sm-12 searchBar bgColorLightBlue">
       <h2>Search</h2>
@@ -10,6 +12,7 @@
         <option value="fish">Fish</option>
         <option value="coral">Coral</option>
       </select>
+      <p>Cart Total: ${{totalPrice}}</p>
       <a [routerLink]="['/cart']"><button type="button" class="btn btn-dark darkblue">View Cart</button></a>
     </div>
     <div class="col-lg-9 col-sm-12">
@@ -18,11 +21,13 @@
           <div class="coral center"><img [src]="'assets/' + product.img">
             <h4 class="center">{{product.name}}</h4>
             <p>{{product.price}}</p>
-            <button type="button" class="btn darkblue textWhite">Add to cart</button>
+            <button (click)="addProduct(product)" type="button" class="btn darkblue textWhite">Add to cart</button>
           </div> 
         </div>
       </div>
     </div>
   </div>
+  <app-footer></app-footer>
 </div>
+
 </div>

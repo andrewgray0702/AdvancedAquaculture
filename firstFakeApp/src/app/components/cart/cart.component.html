@@ -1,14 +1,28 @@
-<div class="behind">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-
+<div [ngStyle]="{background: 'url(assets/reefbackground.jpg)'}">
+<div class="container">
+  <app-header></app-header>
+  <div class="cartContents secondary">
+  <div class="row">
+    <div class="col-4">
+      <h4 class="center">Cart Contents</h4>
+      <div *ngFor="let cartView of cartViews" class="col-12">
+        <ul>
+          <li>{{cartView.name}}</li>
+          <li>{{cartView.price}}</li>
+        </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        
-      </div>
+    <div class="col-8 totalBox">
+      <h4>Check Out</h4>
+      <hr>
+      <h5>Shipping: 45$ UPS Overnight</h5>
+      <h5>Sub-Total: {{subtotal}}</h5>
+      <button (click)="calculateCart()">Calculate</button>
+      <h4>Total: {{cartPrice}}</h4>
+      <button>Check Out</button>
     </div>
   </div>
+  </div>
+  <app-footer></app-footer>
+</div>
 </div>
