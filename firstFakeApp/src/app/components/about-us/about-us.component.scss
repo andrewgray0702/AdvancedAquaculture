@@ -1,9 +1,25 @@
 .behind{
     background-color: #EE6352;
 }
-.jumbotron{
+.jumbotron-fluid{
+    background-color: #08B2E3;
+
+}
+.secondary{
     background-color: #08B2E3;
 }
-.extra{
-    background-color: #08B2E3;
+.blkTop{
+    border-top: 3px solid black;
+}
+.blkLeft{
+    border-left: 3px solid black;
+}
+.blkRight{
+    border-right: 3px solid black;
+}
+.blkBottom{
+    border-bottom: 3px solid black;
+}
+.padding15{
+    padding: 15px;
 }

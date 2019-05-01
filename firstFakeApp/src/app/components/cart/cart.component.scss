@@ -9,5 +9,9 @@
     background-color: #08B2E3;
 }
 .totalBox{
+    box-sizing: border-box;
     border-left: 2px solid black;
+}
+.padding20{
+    padding: 20px;
 }

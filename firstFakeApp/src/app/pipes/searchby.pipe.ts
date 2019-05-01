@@ -9,7 +9,7 @@ export class SearchbyPipe implements PipeTransform {
     if(type == "fish"){
       return value.filter(value => value['type'].includes("fish"));
     } else if(type == "coral"){
-      return value.filter(value => value['type'].inclues("coral"))
+      return value.filter(value => value['type'].includes("coral"))
     }
   }
 

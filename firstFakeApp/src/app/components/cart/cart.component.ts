@@ -13,10 +13,12 @@ export class CartComponent implements OnInit {
   shipping: number = 45;
   subtotal: number = 0;
   constructor(private cartServ: CartService) { }
-  @ViewChild(LiveStockComponent) totalPrice;
   calculateCart(){
     this.subtotal = this.cartServ.getPrice();
     this.cartPrice = Math.floor(this.cartServ.getPrice() + this.shipping);
+  }
+  deleteCartItem(id){
+    this.cartServ.deleteFromCart(id);
   }
   ngOnInit() {
     this.cartViews = JSON.parse(localStorage.getItem('cart'));
