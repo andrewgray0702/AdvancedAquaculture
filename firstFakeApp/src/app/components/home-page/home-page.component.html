@@ -1,7 +1,7 @@
 <div [ngStyle]="{background: 'url(assets/reefbackground.jpg)'}">
   <div class="container">
     <app-header></app-header>
-    <ngb-carousel *ngIf="images">
+    <ngb-carousel style="border-left: 3px solid black; border-right: 3px solid black;" *ngIf="images">
         <ng-template ngbSlide>
           <img [src]="images[0]" alt="Random first slide">
           <div class="carousel-caption">
@@ -31,7 +31,7 @@
 
     <div class="container">
       <div class="row">
-      <div class="card col-lg-4 col-sm-12  darkgray">
+      <div class="card col-lg-4 col-sm-12 blkLeft blkRight blkTop blkBottom darkgray">
         <div class="card-body secondary cardBody">
           <h5 class="card-title">Cycling a saltwater aquarium</h5>
           <p class="card-text">Learn how to properly set up and cycle a reef saltwater aquarium using live rock.</p>
@@ -39,14 +39,14 @@
             class="btn btn-primary">Read Article</a>
         </div>
       </div>
-      <div class="card col-lg-4 col-sm-12 darkgray">
+      <div class="card col-lg-4 col-sm-12 darkgray blkTop blkRight blkBottom">
         <div class="card-body secondary cardBody">
           <h5 class="card-title">Choosing your first fish</h5>
           <p class="card-text">Learn the different factors to consider when picking out your first fish</p>
           <a href="https://m.liveaquaria.com/article/159/?aid=159" class="btn btn-primary">Read Article</a>
         </div>
       </div>
-      <div class="card col-lg-4 col-sm-12 darkgray">
+      <div class="card col-lg-4 col-sm-12 darkgray blkTop blkRight blkBottom">
         <div class="card-body secondary cardBody">
           <h5 class="card-title">Seahorse feeding</h5>
           <p class="card-text">Learn what and how much to feed your seahorses</p>
